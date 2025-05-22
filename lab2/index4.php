@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лабораторная работа №2 - Работа с формой</title>
-    <link rel="stylesheet" href="main.css">
+    <style>
+        input:invalid { border: 2px solid red; } /*не верно*/
+        input:valid { border: 2px solid green; } /*верно*/
+    </style>
 </head>
 <body>
     <h1>Лабораторная работа №2. Работа с формой</h1>

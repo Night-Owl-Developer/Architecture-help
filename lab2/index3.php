@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лабораторная работа №2 - Главная страница</title>
 </head>
-<link rel="stylesheet" href="main.css">
 <body>
     <h1>Лабораторная работа №2. Главная страница</h1>
     <p style="color: green; font-weight:bold">Группа: 23ИД1б</p>
     <p style="color: green; font-weight:bold">Студент: Малютина Ю.В.</p>
-    
-    <form method="GET" action="calculate.php">
-        <label for="a">Число A:</label>
-        <input type="text" id="a" name="a" required><br><br>
-        
-        <label for="b">Число B:</label>
-        <input type="text" id="b" name="b" required><br><br>
-        
-        <input type="submit" class="submit" value="Передать на вычисление">
+
+    <form action="result.php" method="GET">
+        Длина (a): <input type="number" name="a" step="0.01" required><br>
+        Ширина (b): <input type="number" name="b" step="0.01" required><br>
+        Высота (c): <input type="number" name="c" step="0.01" required><br>
+        <input type="submit" value="Рассчитать">
     </form>
 </body>
 </html>

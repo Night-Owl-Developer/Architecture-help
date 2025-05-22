@@ -1,27 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лабораторная работа №2 - Вариант 12</title>
+    <link rel="stylesheet" href="main.css">
 </head>
-<link rel="stylesheet" href="main.css">
 <body>
     <h1>Лабораторная работа №2. Передача данных методом GET без формы</h1>
     <p style="color: green; font-weight:bold">Группа: 23ИД1б</p>
     <p style="color: green; font-weight:bold">Студент: Малютина Ю.В.</p>
-    
+
     <?php
-    if (!empty($_GET['a']) && !empty($_GET['b'])) {
-        $a = $_GET['a'];
-        $b = $_GET['b'];
-        $sum = $a + $b;
-        echo "<p>Переданные параметры: a = $a, b = $b</p>";
-        echo "<p>Сумма чисел: $sum</p>";
-    } else {
-        echo "<p>Параметры не переданы или переданы неверно</p>";
-    }
+        if (isset($_GET['a']) && isset($_GET['b']) && isset($_GET['c'])) {
+            $a = (float)$_GET['a'];
+            $b = (float)$_GET['b'];
+            $c = (float)$_GET['c'];
+            $sum = 4 * ($a + $b + $c);
+            echo "<h3>Результат:</h3>";
+            echo "Сумма длин рёбер: $sum";
+        } else {
+            echo "<p>Нажмите на ссылку для автоматической передачи параметров:</p>";
+        echo '<a href="http://localhost/lab2/index1.php?a=5&b=3&c=2">Передать a=5, b=3, c=2</a>';
+        }
     ?>
-    
-    <p>Пример ссылки для передачи параметров: 
-    <a href="index1.php?a=5&b=3">index1.php?a=5&b=3</a></p>
 </body>
 </html>
